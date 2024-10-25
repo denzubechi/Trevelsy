@@ -66,17 +66,19 @@ export const Testimonial: React.FC = () => {
       </div>
 
       <div className={`testimonial-user-ctn hidden lg:block ${fadeClass}`}>
-        <div className="user-text">
-          <h3 className="testimonial-user-title">
-            {currentTestimonial2.title}
-          </h3>
-          <p className="testimonial-user-paragraph">
-            {currentTestimonial2.content}
-          </p>
-        </div>
-        <div className="testimonial-user">
-          <img src={currentTestimonial2.img} alt={currentTestimonial2.user} />
-          <p className="testimonial-user-name">{currentTestimonial2.user}</p>
+        <div className="flex flex-col justify-between h-full">
+          <div className="user-text">
+            <h3 className="testimonial-user-title">
+              {currentTestimonial2.title}
+            </h3>
+            <p className="testimonial-user-paragraph">
+              {currentTestimonial2.content}
+            </p>
+          </div>
+          <div className="testimonial-user mt-auto">
+            <img src={currentTestimonial2.img} alt={currentTestimonial2.user} />
+            <p className="testimonial-user-name">{currentTestimonial2.user}</p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import React from "react";
-import { FaBookmark, FaSearch, FaAngleDown } from "react-icons/fa";
-
+import ProfilePicture from "../../assets/images/Oval.png";
+import { NAV_LINKS } from "../../lib/constants/links";
 export const SideBar: React.FC = () => {
   return (
     <div className="nav-bar">
@@ -14,43 +14,32 @@ export const SideBar: React.FC = () => {
           </div>
         </label>
       </div>
+
       <div className="navigation">
         <ul className="navigation-list">
-          <li className="navigation-item">
-            <a href="" className="navigation-link">
-              Company Location
-            </a>
-          </li>
-          <li className="navigation-item">
-            <a href="" className="navigation-link">
-              Activities
-            </a>
-          </li>
-          <li className="navigation-item">
-            <a href="" className="navigation-link">
-              Equipments
-            </a>
-          </li>
-          <li className="navigation-item">
-            <a href="" className="navigation-link">
-              Blogs
-            </a>
-          </li>
+          {NAV_LINKS.map((item, index) => (
+            <li key={index} className="navigation-item">
+              <a href={item.path} className="navigation-link">
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
+
         <div className="navigation-profile-container">
           <div className="reservation-ctn">
-            <FaBookmark />
+            <i className="fas fa-search"></i>
             <div className="reservation-text">Reservations</div>
           </div>
           <div className="search-ctn">
-            <FaSearch />
+            <i className="fas fa-search"></i>
           </div>
           <div className="profile-picture-wrapper">
             <div className="active"></div>
-            <img src="./images/Oval.png" alt="" />
+            <img src={ProfilePicture} alt="Profile" />
           </div>
           <div className="dropdown">
-            <FaAngleDown />
+            <i className="fas fa-angle-down"></i>
           </div>
         </div>
       </div>

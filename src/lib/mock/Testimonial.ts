@@ -1,7 +1,7 @@
 import { Testimonial } from "../../interfaces";
 import user1 from "../../assets/images/user1.png";
 import user2 from "../../assets/images/user2.png";
-import user3 from "../../assets/images/user1.png";
+import user3 from "../../assets/images/Oval.png";
 import user4 from "../../assets/images/user2.png";
 
 export const testimonials: Testimonial[] = [
@@ -45,6 +45,6 @@ export const testimonials: Testimonial[] = [
     content:
       "Our family had a great time! The kids especially loved the guided tours. Highly recommend it for family vacations.",
     user: "Sarah White",
-    img: user2,
+    img: user3,
   },
 ];
